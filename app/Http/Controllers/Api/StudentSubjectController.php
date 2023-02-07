@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\StudentClass;
 use App\Models\StudentSubject;
+use Illuminate\Support\Carbon;
 
 class StudentSubjectController extends Controller
 {
@@ -25,6 +25,7 @@ class StudentSubjectController extends Controller
              'class_id' => $request->class_id,
              'subject_name' => $request->subject_name,
              'subject_code' => $request->subject_code,
+             'created_at' => Carbon::now(),
        ]);
        return response('['.$request->subject_name.'] Student Subject was created Successfully!');      
   }

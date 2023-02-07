@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\StudentClass;
+use Illuminate\Support\Carbon;
 
 class StudentClassController extends Controller
 {
@@ -21,6 +22,7 @@ class StudentClassController extends Controller
           
         StudentClass::insert([
               'class_name' => $request->class_name,
+              'created_at' => Carbon::now(),
         ]);
         return response('[Student Class: '.$request->class_name.'] was created Successfully!');      
    }

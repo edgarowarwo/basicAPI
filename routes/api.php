@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\StudentClassController;
 use App\Http\Controllers\Api\StudentSubjectController;
+use App\Http\Controllers\Api\StudentSectionController;
+use App\Http\Controllers\Api\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +35,17 @@ Route::post('/subject/store',[StudentSubjectController::class, 'StoreSubject']);
 Route::get('/subject/edit/{id}',[StudentSubjectController::class, 'EditSubject']);
 Route::post('/subject/update/{id}',[StudentSubjectController::class, 'UpdateSubject']);
 Route::get('/subject/delete/{id}',[StudentSubjectController::class, 'DeleteSubject']);
+
+// Student Section Table Routes
+Route::get('/section',[StudentSectionController::class, 'ReadSection']);
+Route::post('/section/store',[StudentSectionController::class, 'StoreSection']);
+Route::get('/section/edit/{id}',[StudentSectionController::class, 'EditSection']);
+Route::post('/section/update/{id}',[StudentSectionController::class, 'UpdateSection']);
+Route::get('/section/delete/{id}',[StudentSectionController::class, 'DeleteSection']);
+
+// Student Table Routes
+Route::get('/student',[StudentController::class, 'ReadStudent']);
+Route::post('/student/store',[StudentController::class, 'StoreStudent']);
+Route::get('/student/edit/{id}',[StudentController::class, 'EditStudent']);
+Route::post('/student/update/{id}',[StudentController::class, 'UpdateStudent']);
+Route::get('/student/delete/{id}',[StudentController::class, 'DeleteStudent']);
