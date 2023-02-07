@@ -1,15 +1,18 @@
 <p align="center">
-Basic Rest API
+Basic Rest API with Laravel and Postman
 </p>
 
 ## About this Project
 
-This is a complete Laravel CRUD basic API project that is fully dynamic expressing the basic skills of laravel. I employed different functionalities such as:
+This is a basic Laravel Student registration system with REST API. Anyone with the API details can be able to:
 
-- Create Record
-- Read Record. 
-- Update Record
-- Delete Record
+- Register 
+- Read 
+- Update
+- Delete
+
+A student class, subject and student.
+
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
